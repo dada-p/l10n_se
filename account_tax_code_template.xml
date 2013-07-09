@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <!--Tax code template: 24-01-2013 -->
+        <record id="moms_root" model="account.tax.code.template">
+            <field name="name">Svensk MOMS plan</field>
+            <field name="parent_id" eval="False"/>
+            <field name="code"/>
+        </record>
+        <record id="moms_g" model="account.tax.code.template">
+            <field name="name">G. Moms att betala eller få tillbaka</field>
+            <field name="code"></field>
+            <field name="parent_id" ref="moms_root"/>
+            <field name="sign">0</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_g_49" model="account.tax.code.template">
+                <field name="name">Moms att betala eller få tillbaka</field>
+                <field name="code">49</field>
+                <field name="parent_id" ref="moms_g"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+        <record id="moms_a" model="account.tax.code.template">
+            <field name="name">A. Momspliktig försäljning eller uttag exklusive moms</field>
+            <field name="code">A</field>
+            <field name="parent_id" ref="moms_root"/>
+            <field name="sign">0</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_a_05" model="account.tax.code.template">
+                <field name="name">Momspliktig försäljning som inte ingår i annan ruta nedan</field>
+                <field name="code">05</field>
+                <field name="parent_id" ref="moms_a"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+                <record id="moms_a_05_u25" model="account.tax.code.template">
+                    <field name="name">Momspliktig försäljning bas 25%</field>
+                    <field name="code">05</field>
+                    <field name="parent_id" ref="moms_a_05"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="False"/>
+                </record>
+                <record id="moms_a_05_u12" model="account.tax.code.template">
+                    <field name="name">Momspliktig försäljning bas 12%</field>
+                    <field name="code">05</field>
+                    <field name="parent_id" ref="moms_a_05"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="False"/>
+                </record>
+                <record id="moms_a_05_u06" model="account.tax.code.template">
+                    <field name="name">Momspliktig försäljning bas 6%</field>
+                    <field name="code">05</field>
+                    <field name="parent_id" ref="moms_a_05"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="False"/>
+                </record>
+            <record id="moms_a_06" model="account.tax.code.template">
+                <field name="name">Momspliktiga uttag</field>
+                <field name="code">06</field>
+                <field name="parent_id" ref="moms_a"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+                <record id="moms_a_06_u25" model="account.tax.code.template">
+                    <field name="name">Momspliktiga uttag bas 25%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_a_06"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+                <record id="moms_a_06_u12" model="account.tax.code.template">
+                    <field name="name">Momspliktiga uttag bas 12%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_a_06"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+                <record id="moms_a_06_u06" model="account.tax.code.template">
+                    <field name="name">Momspliktia uttag bas 6%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_a_06"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+            <record id="moms_a_07" model="account.tax.code.template">
+                <field name="name">Beskattningsunderlag vid vinstmarginalbeskattning</field>
+                <field name="code">07</field>
+                <field name="parent_id" ref="moms_a"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_a_08" model="account.tax.code.template">
+                <field name="name">Hyresinkomster vid frivillig skattskyldighet</field>
+                <field name="code">08</field>
+                <field name="parent_id" ref="moms_a"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+        <record id="moms_b" model="account.tax.code.template">
+            <field name="name">B. Utgående moms på försäljning eller uttag i ruta 05 - 08</field>
+            <field name="code">B</field>
+            <field name="parent_id" ref="moms_g_49"></field>
+            <field name="sign">1</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_b_10" model="account.tax.code.template">
+                <field name="name">Utgående moms 25%</field>
+                <field name="code">10</field>
+                <field name="parent_id" ref="moms_b"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_b_11" model="account.tax.code.template">
+                <field name="name">Utgående moms 12%</field>
+                <field name="code">11</field>
+                <field name="parent_id" ref="moms_b"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_b_12" model="account.tax.code.template">
+                <field name="name">Utgående moms 6%</field>
+                <field name="code">12</field>
+                <field name="parent_id" ref="moms_b"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+        <record id="moms_c" model="account.tax.code.template">
+            <field name="name">C. Momspliktiga inköp där köparen är skattskyldig</field>
+            <field name="code">C</field>
+            <field name="parent_id" ref="moms_root"/>
+            <field name="sign">0</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_c_20" model="account.tax.code.template">
+                <field name="name">Inköp av varor från annat EG-land</field>
+                <field name="code">20</field>
+                <field name="parent_id" ref="moms_c"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_c_21" model="account.tax.code.template">
+                <field name="name">Inköp av tjänster från annat EG-land</field>
+                <field name="code">21</field>
+                <field name="parent_id" ref="moms_c"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_c_22" model="account.tax.code.template">
+                <field name="name">Inköp av tjänster från land utanför EG</field>
+                <field name="code">22</field>
+                <field name="parent_id" ref="moms_c"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_c_23" model="account.tax.code.template">
+                <field name="name">Inköp av varor i Sverige</field>
+                <field name="code">23</field>
+                <field name="parent_id" ref="moms_c"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_c_24" model="account.tax.code.template">
+                <field name="name">Inköp av tjänster i Sverige</field>
+                <field name="code">24</field>
+                <field name="parent_id" ref="moms_c"/>
+                <field name="sign">0</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+        <record id="moms_d" model="account.tax.code.template">
+            <field name="name">D. Utgående moms på inköp i ruta 20 - 24</field>
+            <field name="code">D</field>
+            <field name="parent_id" ref="moms_g_49"></field>
+            <field name="sign">1</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_d_30" model="account.tax.code.template">
+                <field name="name">Utgående moms 25%</field>
+                <field name="code">30</field>
+                <field name="parent_id" ref="moms_d"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_d_31" model="account.tax.code.template">
+                <field name="name">Utgående moms 12%</field>
+                <field name="code">31</field>
+                <field name="parent_id" ref="moms_d"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+            <record id="moms_d_32" model="account.tax.code.template">
+                <field name="name">Utgående moms 6%</field>
+                <field name="code">32</field>
+                <field name="parent_id" ref="moms_d"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+        <record id="moms_e" model="account.tax.code.template">
+            <field name="name">E. Försäljning m.m. som är undantagen från moms</field>
+            <field name="code">E</field>
+            <field name="parent_id" ref="moms_root"/>
+            <field name="sign">0</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+           <record id="moms_e_35" model="account.tax.code.template">
+               <field name="name">Försäljning av varor till annat EG-land</field>
+               <field name="code">35</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_36" model="account.tax.code.template">
+               <field name="name">Försäljning av varor utanför EG</field>
+               <field name="code">36</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_37" model="account.tax.code.template">
+               <field name="name">Mellanmans inköp av varor vid trepartshandel</field>
+               <field name="code">37</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_38" model="account.tax.code.template">
+               <field name="name">Mellanmans försäljning av varor vid trepartshandel</field>
+               <field name="code">38</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_39" model="account.tax.code.template">
+               <field name="name">Försäjning av tjänster när köparen är skatteskyldig i EG</field>
+               <field name="code">39</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_40" model="account.tax.code.template">
+               <field name="name">Övrig försäljning av tjänster omsatta i utlandet</field>
+               <field name="code">40</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_41" model="account.tax.code.template">
+               <field name="name">Försäljning när köparen är skatteskyldig i Sverige</field>
+               <field name="code">41</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+           <record id="moms_e_42" model="account.tax.code.template">
+               <field name="name">Övrig försäljning m.m.</field>
+               <field name="code">42</field>
+               <field name="parent_id" ref="moms_e"/>
+               <field name="sign">0</field>
+               <field name="notprintable" eval="False"/>
+           </record>
+        <record id="moms_x" model="account.tax.code.template">
+            <field name="name">X. Ingående moms bas</field>
+            <field name="code"/>
+            <field name="parent_id" ref="moms_root"></field>
+            <field name="sign">0</field>
+            <field name="notprintable" eval="True"/>
+        </record>
+           <record id="moms_x_i25" model="account.tax.code.template">
+               <field name="name">Ingående moms bas 25%</field>
+               <field name="code">x01</field>
+               <field name="parent_id" ref="moms_x"/>
+               <field name="sign">1</field>
+               <field name="notprintable" eval="True"/>
+           </record>
+           <record id="moms_x_i12" model="account.tax.code.template">
+               <field name="name">Ingående moms bas 12%</field>
+               <field name="code">x02</field>
+               <field name="parent_id" ref="moms_x"/>
+               <field name="sign">1</field>
+               <field name="notprintable" eval="True"/>
+           </record>
+           <record id="moms_x_i06" model="account.tax.code.template">
+               <field name="name">Ingående moms bas 6%</field>
+               <field name="code">x03</field>
+               <field name="parent_id" ref="moms_x"/>
+               <field name="sign">1</field>
+               <field name="notprintable" eval="True"/>
+           </record>
+            <record id="moms_x_i00" model="account.tax.code.template">
+                <field name="name">Ingående bas momsfri</field>
+                <field name="code">x04</field>
+                <field name="parent_id" ref="moms_x"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="True"/>
+            </record>
+        <record id="moms_f" model="account.tax.code.template">
+            <field name="name">F. Ingående moms</field>
+            <field name="code">F</field>
+            <field name="parent_id" ref="moms_g_49"/>
+            <field name="sign">-1</field>
+            <field name="notprintable" eval="False"/>
+        </record>
+            <record id="moms_f_48" model="account.tax.code.template">
+                <field name="name">Ingående moms att dra av</field>
+                <field name="code">48</field>
+                <field name="parent_id" ref="moms_f"/>
+                <field name="sign">1</field>
+                <field name="notprintable" eval="False"/>
+            </record>
+                <record id="moms_f_48_i25" model="account.tax.code.template">
+                    <field name="name">Ingående moms 25%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_f_48"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+                <record id="moms_f_48_i12" model="account.tax.code.template">
+                    <field name="name">Ingående moms 12%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_f_48"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+                <record id="moms_f_48_i06" model="account.tax.code.template">
+                    <field name="name">Ingående moms 6%</field>
+                    <field name="code"/>
+                    <field name="parent_id" ref="moms_f_48"/>
+                    <field name="sign">1</field>
+                    <field name="notprintable" eval="True"/>
+                </record>
+     </data>
+</openerp>

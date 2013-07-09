@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <!-- Momspliktiga försäljning av varor -->
+    <record model="account.tax.template" id="U25">
+      <field name="sequence" eval="9"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående 25%</field>
+      <field name="description">U25</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_05_u25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_10"/>
+      <field name="tax_sign" eval="1"/>
+
+      <field name="account_collected_id" ref="bas_2611"/>
+      <field name="account_paid_id" ref="bas_2611"/>
+
+      <field name="ref_base_code_id" ref="moms_a_05_u25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_10"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <record model="account.tax.template" id="U12">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående 12%</field>
+      <field name="description">U12</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_05_u12"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_11"/>
+      <field name="tax_sign" eval="1"/>
+
+      <field name="account_collected_id" ref="bas_2621"/>
+      <field name="account_paid_id" ref="bas_2621"/>
+
+      <field name="ref_base_code_id" ref="moms_a_05_u12"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_11"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <record model="account.tax.template" id="U06">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående 6%</field>
+      <field name="description">U06</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_05_u06"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_12"/>
+      <field name="tax_sign" eval="1"/>
+
+      <field name="account_collected_id" ref="bas_2631"/>
+      <field name="account_paid_id" ref="bas_2631"/>
+
+      <field name="ref_base_code_id" ref="moms_a_05_u06"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_12"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <!-- Momspliktiga försäljning av tjänster -->
+    <record model="account.tax.template" id="U25T">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående (tjänster) 25%</field>
+      <field name="description">U25-T</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_05_u25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_10"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2611"/>
+      <field name="account_paid_id" ref="bas_2611"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_05_u25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_10"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <!-- Momspliktiga uttag -->
+    <record model="account.tax.template" id="MU25">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Momspliktiga uttag 25%</field>
+      <field name="description">M-U25</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_06_u25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_10"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2612"/>
+      <field name="account_paid_id" ref="bas_2612"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_06_u25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_10"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <record model="account.tax.template" id="MU12">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Momspliktiga uttag 12%</field>
+      <field name="description">M-U12</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_06_u12"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_11"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2622"/>
+      <field name="account_paid_id" ref="bas_2622"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_06_u12"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_11"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <record model="account.tax.template" id="MU06">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Momspliktiga uttag 6%</field>
+      <field name="description">M-U06</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_06_u06"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_12"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2632"/>
+      <field name="account_paid_id" ref="bas_2632"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_06_u06"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_12"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <!-- Beskattningunderlag vid VMB -->
+    <record model="account.tax.template" id="VU25">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående moms VMB 25%</field>
+      <field name="description">V-U25</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_07"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_10"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2616"/>
+      <field name="account_paid_id" ref="bas_2616"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_07"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_10"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+        
+    <!-- Hyresinkomster vid frivillig skattskyldighet -->
+    <record model="account.tax.template" id="HU25">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående moms hyresinkomster 25%</field>
+      <field name="description">H-U25</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_a_08"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_b_10"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2613"/>
+      <field name="account_paid_id" ref="bas_2613"/>
+      
+      <field name="ref_base_code_id" ref="moms_a_08"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_b_10"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+
+    <!-- Momspliktiga inköp: import -->
+    
+    <!-- Inköp av varor från ett annat EU-land -->
+    <record model="account.tax.template" id="U25VE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Moms på varor från ett annat EU-land - 25%</field>
+      <field name="description">U25-V-EG</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_20"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_30"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2615"/>
+      <field name="account_paid_id" ref="bas_2615"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_20"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_30"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="U12VE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Moms på varor från ett annat EU-land - 12%</field>
+      <field name="description">U12-V-EG</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_20"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_31"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2625"/>
+      <field name="account_paid_id" ref="bas_2625"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_20"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_31"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="U06VE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Moms på varor från ett annat EU-land - 6%</field>
+      <field name="description">U06-V-EG</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_20"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_32"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2635"/>
+      <field name="account_paid_id" ref="bas_2635"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_20"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_32"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <!-- Inköp av tjänster från ett annat EU-land -->
+    <record model="account.tax.template" id="U25TE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Moms på tjänster från ett annat EU-land - 25%</field>
+      <field name="description">U25-T-EG</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_21"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_30"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2614"/>
+      <field name="account_paid_id" ref="bas_2614"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_21"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_30"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <!-- Inköp av tjänster från ett land utanför EU -->
+    <record model="account.tax.template" id="U25TU">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Moms på tjänster från ett land utanför EU - 25%</field>
+      <field name="description">U25-T-NEG</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_22"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_30"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2614"/>
+      <field name="account_paid_id" ref="bas_2614"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_22"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_30"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+
+    <!-- Övriga inköp av varor (omvänd) -->
+    <record model="account.tax.template" id="U-V-BYGG">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående moms på varor 25% (omvänd)</field>
+      <field name="description">U-T-BYGG</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_23"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_30"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2617"/>
+      <field name="account_paid_id" ref="bas_2617"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_23"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_30"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <!-- Övriga inköp av tjänster (omvänd) - t.ex. bygg -->
+    <record model="account.tax.template" id="U-T-BYGG">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Utgående moms på tjänster 25% (omvänd)</field>
+      <field name="description">U-BYGG</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_c_24"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_d_30"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2617"/>
+      <field name="account_paid_id" ref="bas_2617"/>
+      
+      <field name="ref_base_code_id" ref="moms_c_24"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_d_30"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <!-- Ingående moms -->
+    <record model="account.tax.template" id="I25">
+      <field name="sequence">9</field>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Ingående 25%</field>
+      <field name="description">I25</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_f_48_i25"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2641"/>
+      <field name="account_paid_id" ref="bas_2641"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_f_48_i25"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="I25T">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Ingående 25% (tjänster)</field>
+      <field name="description">I25-T</field>
+      <field name="amount" eval="0.25"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_f_48_i25"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2641"/>
+      <field name="account_paid_id" ref="bas_2641"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_f_48_i25"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="I12">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Ingående 12%</field>
+      <field name="description">I12</field>
+      <field name="amount" eval="0.12"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i12"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_f_48_i12"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2641"/>
+      <field name="account_paid_id" ref="bas_2641"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i12"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_f_48_i12"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="I06">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Ingående 6%</field>
+      <field name="description">I06</field>
+      <field name="amount" eval="0.06"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i06"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_f_48_i06"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2641"/>
+      <field name="account_paid_id" ref="bas_2641"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i06"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_f_48_i06"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="I00">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Import momsfri</field>
+      <field name="description">I00</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i00"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i00"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="sequence" eval="10"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="I25L">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Ingående - Leasing halvmoms 25%</field>
+      <field name="description">I25-L</field>
+      <field name="amount" eval="0.1111"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_x_i25"/>
+      <field name="base_sign" eval="1"/>
+      <field name="tax_code_id" ref="moms_f_48_i25"/>
+      <field name="tax_sign" eval="1"/>
+      
+      <field name="account_collected_id" ref="bas_2641"/>
+      <field name="account_paid_id" ref="bas_2641"/>
+      
+      <field name="ref_base_code_id" ref="moms_x_i25"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="ref_tax_code_id" ref="moms_f_48_i25"/>
+      <field name="ref_tax_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <!-- Försäljning undantagen från moms -->
+    
+    <!-- Utg momsfri varor export -->
+    <record model="account.tax.template" id="FVE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Varor export EU-land</field>
+      <field name="description">F-V-EG</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_35"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_35"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <record model="account.tax.template" id="FVU">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Varor export utanfor EU-land</field>
+      <field name="description">F-V-NEG</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_36"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_36"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <!-- Utg momsfri tjänster export -->
+    <record model="account.tax.template" id="FTE">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Tjänster export EU-land</field>
+      <field name="description">F-T-EG</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_39"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_39"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <record model="account.tax.template" id="FTU">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Tjänster export utanfor EU-land</field>
+      <field name="description">F-T-NEG</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_40"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_40"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <!-- Mellanmans inköp och försäljning av varor vid trepartshanddel försäljning -->
+    <record model="account.tax.template" id="FI3">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Mellanmans inköp av varor vid trepartshandel</field>
+      <field name="description">F-I-3</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_37"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_37"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">purchase</field>
+    </record>
+    
+    <record model="account.tax.template" id="FF3">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Mellanmans försäljning av varor vid trepartshandel</field>
+      <field name="description">F-F-3</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_38"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_38"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+       
+    <!-- Övrig försäljning av tjänster momsfri - t.ex. bygg -->
+    <record model="account.tax.template" id="F-T-BYGG">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Övrig försäljning av tjänster momsfri </field>
+      <field name="description">F-BYGG</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_41"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_41"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+    
+    <!-- Övrig försäljning momsfri -->
+    <record model="account.tax.template" id="FO">
+      <field name="sequence" eval="10"/>
+      <field name="chart_template_id" ref="l10n_se_chart_template"/>
+      <field name="name">Övrig försäljning momsfri</field>
+      <field name="description">F-O</field>
+      <field name="amount" eval="0"/>
+      <field name="type">percent</field>
+      <field name="base_code_id" ref="moms_e_42"/>
+      <field name="base_sign" eval="1"/>
+      
+      <field name="ref_base_code_id" ref="moms_e_42"/>
+      <field name="ref_base_sign" eval="-1"/>
+      <field name="type_tax_use">sale</field>
+    </record>
+  
+
+<!-- Assign default taxes to accounts -->
+    
+    <record id="bas_1211" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1213" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1221" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1222" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1223" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1225" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1231" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1232" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1241" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1242" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1243" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1244" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1245" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1246" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1247" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1251" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1257" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1260" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1291" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_1292" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_2011" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU25')])]"/>
+    </record>
+    <record id="bas_2021" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU25')])]"/>
+    </record>
+    <record id="bas_2031" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU25')])]"/>
+    </record>
+    <record id="bas_2041" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU25')])]"/>
+    </record>
+    <record id="bas_3001" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3002" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U12')])]"/>
+    </record>
+    <record id="bas_3003" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U06')])]"/>
+    </record>
+    <record id="bas_3004" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3105" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FVU')])]"/>
+    </record>
+    <record id="bas_3106" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3108" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FVE')])]"/>
+    </record>
+    <record id="bas_3211" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('VU25')])]"/>
+    </record>
+    <record id="bas_3212" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('VU25')])]"/>
+    </record>
+    <record id="bas_3231" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('F-T-BYGG')])]"/>
+    </record>
+    <record id="bas_3305" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FTU')])]"/>
+    </record>
+    <record id="bas_3308" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FTE')])]"/>
+    </record>
+    <record id="bas_3401" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU25')])]"/>
+    </record>
+    <record id="bas_3402" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU12')])]"/>
+    </record>
+    <record id="bas_3403" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('MU06')])]"/>
+    </record>
+    <record id="bas_3511" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3518" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3520" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3521" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3522" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3530" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3540" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3541" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3542" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3550" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3561" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3562" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3563" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3570" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3590" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3611" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3612" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3613" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3619" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3690" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3731" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3732" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25')])]"/>
+    </record>
+    <record id="bas_3911" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3912" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3913" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('HU25')])]"/>
+    </record>
+    <record id="bas_3921" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3922" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3925" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3940" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3950" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3981" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3985" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3987" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3988" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3989" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3991" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3992" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3993" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3994" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3995" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3996" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_3997" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('FO')])]"/>
+    </record>
+    <record id="bas_4000" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_4425" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U-T-BYGG')])]"/>
+    </record>
+    <record id="bas_4515" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25VE')])]"/>
+    </record>
+    <record id="bas_4516" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U12VE')])]"/>
+    </record>
+    <record id="bas_4517" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U06VE')])]"/>
+    </record>
+    <record id="bas_4535" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('U25TE')])]"/>
+    </record>
+    <record id="bas_4600" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5011" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5012" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5013" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5020" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5030" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5040" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5050" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5061" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5062" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5063" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5064" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5065" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5070" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5098" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5099" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5110" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5120" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5131" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5132" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5140" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5161" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5162" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5163" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5164" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5165" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5170" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5192" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5193" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5198" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5211" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5212" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5221" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5222" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5251" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5252" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5290" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5310" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5320" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5330" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5340" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5350" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5360" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5370" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5380" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5390" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5410" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5420" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5430" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5440" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5460" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5480" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5490" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5510" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5520" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5530" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5550" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5580" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5590" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5611" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5613" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5615" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25L')])]"/>
+    </record>
+    <record id="bas_5619" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5621" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5623" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5624" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5625" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25L')])]"/>
+    </record>
+    <record id="bas_5631" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5633" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5635" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25L')])]"/>
+    </record>
+    <record id="bas_5639" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5641" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5643" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5645" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25L')])]"/>
+    </record>
+    <record id="bas_5649" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5651" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5653" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5655" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25L')])]"/>
+    </record>
+    <record id="bas_5659" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5660" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5670" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5690" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5710" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5730" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5790" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5810" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I06')])]"/>
+    </record>
+    <record id="bas_5820" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5831" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5832" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5890" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5910" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5920" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5930" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5940" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5950" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5960" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5970" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5980" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_5990" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6010" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6090" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6110" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6150" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6211" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6212" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6213" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6214" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6215" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6230" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6250" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6310" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6510" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6520" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6530" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6540" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6550" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6560" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6580" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6590" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6910" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    <record id="bas_6970" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I06')])]"/>
+    </record>
+    <record id="bas_6981" model="account.account.template">
+      <field name="tax_ids" eval="[(6,0,[ref('I25')])]"/>
+    </record>
+    
+  </data>
+</openerp>

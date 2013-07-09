@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- Fiscal Position Templates -->
+        <!-- 
+            Sve EU  NonEU
+
+            U25 FVE FVU
+            U12 FVE FVU
+            U06 FVE FVU
+            U25-T FTE FTU
+
+            I25 U25VE I00
+            I12 U12VE I00
+            I06 U06VE I00
+            I25-T U25TE U25TU
+        -->
+        
+        <record id="fiscal_position_se_template_1" model="account.fiscal.position.template">
+            <field name="name">Sverige</field>
+            <field name="chart_template_id" ref="l10n_se_chart_template"/>
+        </record>
+        
+        <record id="fiscal_position_se_template_2" model="account.fiscal.position.template">
+            <field name="name">Annat EU-land</field>
+            <field name="chart_template_id" ref="l10n_se_chart_template"/>
+        </record>
+        
+        <record id="fiscal_position_se_template_3" model="account.fiscal.position.template">
+            <field name="name">Utanfor EU</field>
+            <field name="chart_template_id" ref="l10n_se_chart_template"/>
+        </record>
+        
+        <!-- Fiscal Position Tax Templates -->
+  
+        <!-- Sverige -->
+
+        <record id="fiscal_position_se_tax_template_1" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="FVE" />
+            <field name="tax_dest_id" ref="U25" />
+        </record>
+        <record id="fiscal_position_se_tax_template_2" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="FTE" />
+            <field name="tax_dest_id" ref="U25T" />
+        </record>
+        <record id="fiscal_position_se_tax_template_3" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="U25VE" />
+            <field name="tax_dest_id" ref="I25" />
+        </record>
+        <record id="fiscal_position_se_tax_template_4" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="U12VE" />
+            <field name="tax_dest_id" ref="I12" />
+        </record>
+        <record id="fiscal_position_se_tax_template_5" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="U06VE" />
+            <field name="tax_dest_id" ref="I06" />
+        </record>
+        <record id="fiscal_position_se_tax_template_6" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="U25TE" />
+            <field name="tax_dest_id" ref="I25T" />
+        </record>
+        
+        <record id="fiscal_position_se_tax_template_7" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="FVU" />
+            <field name="tax_dest_id" ref="U25" />
+        </record>
+        <record id="fiscal_position_se_tax_template_8" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="FTU" />
+            <field name="tax_dest_id" ref="U25T" />
+        </record>
+        <record id="fiscal_position_se_tax_template_9" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="I00" />
+            <field name="tax_dest_id" ref="I25" />
+        </record>
+        <record id="fiscal_position_se_tax_template_10" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="tax_src_id" ref="U25TU" />
+            <field name="tax_dest_id" ref="I25T" />
+        </record>
+        
+        <!-- EG-land -->
+        
+        <record id="fiscal_position_se_tax_template_11" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="U25" />
+            <field name="tax_dest_id" ref="FVE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_12" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="U12" />
+            <field name="tax_dest_id" ref="FVE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_13" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="U06" />
+            <field name="tax_dest_id" ref="FVE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_14" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="U25T" />
+            <field name="tax_dest_id" ref="FTE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_15" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="I25" />
+            <field name="tax_dest_id" ref="U25VE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_16" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="I12" />
+            <field name="tax_dest_id" ref="U12VE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_17" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="I06" />
+            <field name="tax_dest_id" ref="U06VE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_18" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="I25T" />
+            <field name="tax_dest_id" ref="U25TE" />
+        </record>
+        
+        <record id="fiscal_position_se_tax_template_19" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="FVU" />
+            <field name="tax_dest_id" ref="FVE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_20" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="FTU" />
+            <field name="tax_dest_id" ref="FTE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_21" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="I00" />
+            <field name="tax_dest_id" ref="U25VE" />
+        </record>
+        <record id="fiscal_position_se_tax_template_22" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="tax_src_id" ref="U25TU" />
+            <field name="tax_dest_id" ref="U25TE" />
+        </record>
+        
+        <!-- non-EG land -->
+        <record id="fiscal_position_se_tax_template_23" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U25" />
+            <field name="tax_dest_id" ref="FVU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_24" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U12" />
+            <field name="tax_dest_id" ref="FVU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_25" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U06" />
+            <field name="tax_dest_id" ref="FVU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_26" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U25T" />
+            <field name="tax_dest_id" ref="FTU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_27" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="I25" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_28" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="I12" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_29" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="I06" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_30" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="I25T" />
+            <field name="tax_dest_id" ref="U25TU" />
+        </record>
+        
+        <record id="fiscal_position_se_tax_template_31" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="FVE" />
+            <field name="tax_dest_id" ref="FVU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_32" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="FTE" />
+            <field name="tax_dest_id" ref="FTU" />
+        </record>
+        <record id="fiscal_position_se_tax_template_33" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U25VE" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_34" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U12VE" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_35" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U06VE" />
+            <field name="tax_dest_id" ref="I00" />
+        </record>
+        <record id="fiscal_position_se_tax_template_36" model="account.fiscal.position.tax.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="tax_src_id" ref="U25TE" />
+            <field name="tax_dest_id" ref="U25TU" />
+        </record>
+
+        <!-- Fiscal Position Account Templates -->
+        <!-- 
+            Sv   EU    nEU
+
+            3001 3108  3105
+            3002 3108  3105
+            3003 3108  3105
+        -->
+    
+        <record id="fiscal_position_se_account_template_1" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="account_src_id" ref="bas_3108" />
+            <field name="account_dest_id" ref="bas_3001" />
+        </record>
+        <record id="fiscal_position_se_account_template_2" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_1"  />
+            <field name="account_src_id" ref="bas_3105" />
+            <field name="account_dest_id" ref="bas_3001" />
+        </record>
+        
+        <record id="fiscal_position_se_account_template_3" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="account_src_id" ref="bas_3001" />
+            <field name="account_dest_id" ref="bas_3108" />
+        </record>
+        <record id="fiscal_position_se_account_template_4" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="account_src_id" ref="bas_3002" />
+            <field name="account_dest_id" ref="bas_3108" />
+        </record>
+        <record id="fiscal_position_se_account_template_5" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="account_src_id" ref="bas_3003" />
+            <field name="account_dest_id" ref="bas_3108" />
+        </record>
+        <record id="fiscal_position_se_account_template_6" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_2"  />
+            <field name="account_src_id" ref="bas_3105" />
+            <field name="account_dest_id" ref="bas_3108" />
+        </record>
+        
+        <record id="fiscal_position_se_account_template_7" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="account_src_id" ref="bas_3001" />
+            <field name="account_dest_id" ref="bas_3105" />
+        </record>
+        <record id="fiscal_position_se_account_template_8" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="account_src_id" ref="bas_3002" />
+            <field name="account_dest_id" ref="bas_3105" />
+        </record>
+        <record id="fiscal_position_se_account_template_9" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="account_src_id" ref="bas_3003" />
+            <field name="account_dest_id" ref="bas_3105" />
+        </record>
+        <record id="fiscal_position_se_account_template_10" model="account.fiscal.position.account.template">
+            <field name="position_id" ref="fiscal_position_se_template_3"  />
+            <field name="account_src_id" ref="bas_3108" />
+            <field name="account_dest_id" ref="bas_3105" />
+        </record>
+    </data>
+</openerp>    
